@@ -1,0 +1,42 @@
+# depslib dependency file v1.0
+1589841454 source:c:\users\gabri\onedrive\escritorio\facultad\programacion-laboratorio\laboratorioparcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	"clientes-mascotas.h"
+
+1589836399 c:\users\gabri\onedrive\escritorio\facultad\programacion-laboratorio\laboratorioparcial\clientes.h
+	<stdio.h>
+	<string.h>
+
+1589841356 source:c:\users\gabri\onedrive\escritorio\facultad\programacion-laboratorio\laboratorioparcial\clientes.c
+	"clientes-mascotas.h"
+
+1589842127 source:c:\users\gabri\onedrive\escritorio\facultad\programacion-laboratorio\laboratorioparcial\mascotas.c
+	"clientes-mascotas.h"
+
+1589842115 c:\users\gabri\onedrive\escritorio\facultad\programacion-laboratorio\laboratorioparcial\mascotas.h
+	<stdio.h>
+	<string.h>
+
+1589836282 c:\users\gabri\onedrive\escritorio\facultad\programacion-laboratorio\laboratorioparcial\clientes-mascotas.h
+	<stdio.h>
+	<string.h>
+	"mascotas.h"
+	"clientes.h"
+	"input.h"
+
+1589842115 source:c:\users\gabri\onedrive\escritorio\facultad\programacion-laboratorio\laboratorioparcial\clientes-mascotas.c
+	"clientes-mascotas.h"
+
+1589813499 source:c:\users\gabri\onedrive\escritorio\facultad\programacion-laboratorio\laboratorioparcial\input.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<ctype.h>
+	"input.h"
+
+1589824987 c:\users\gabri\onedrive\escritorio\facultad\programacion-laboratorio\laboratorioparcial\input.h
+	<stdio.h>
+	<string.h>
+	<ctype.h>
+
