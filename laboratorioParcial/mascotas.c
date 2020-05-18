@@ -119,7 +119,7 @@ void listarTipoAnimal()
 
 void mostrarMascota(eMascotas listarMascotas[],int i)
 {
-    printf("%2d | %7s \t%10s \t%10s \t%10s\t%2d \t%5.2f \t%5c\n",listarMascotas[i].idMascota,listarMascotas[i].nombre,TipoRaza(listarMascotas[i].tipo),listarMascotas[i].raza.nombre, listarMascotas[i].raza.pais,listarMascotas[i].edad,listarMascotas[i].peso,listarMascotas[i].sexo);
+    printf("%2d | %7s \t%10s \t%10s \t%15s\t%15d \t%5.2f \t%5c\n",listarMascotas[i].idMascota,listarMascotas[i].nombre,TipoRaza(listarMascotas[i].tipo),listarMascotas[i].raza.nombre, listarMascotas[i].raza.pais,listarMascotas[i].edad,listarMascotas[i].peso,listarMascotas[i].sexo);
 }
 
 
@@ -133,7 +133,7 @@ void listarMascotas(eMascotas listaMascotas[], int sizeMascota)
 
     if(hayMascotas>=1)
         {
-            printf(" ID \tNOMBRE        TIPO      RAZA     PAIS     EDAD      PESO      SEXO    SEXO\n");
+            printf(" ID \tNOMBRE        TIPO      RAZA                      PAIS             EDAD        PESO       SEXO   \n");
             printf("------------------------------------------------------------------------------------\n");
             for(i=0;i<sizeMascota;i++)
                 {
@@ -156,7 +156,7 @@ void listarMasctotaPorTipo(eMascotas listaMascota[], int sizeMasctota)
 
     listarTipoAnimal();
     getInt(&tipo,"Seleccione el tipo de animal para visualizar su lista:","Error, no es un una saleccion valida\n",1,3,10);
-    printf(" ID \tNOMBRE        TIPO      RAZA     PAIS     EDAD      PESO      SEXO    \n");
+     printf(" ID \tNOMBRE        TIPO      RAZA                      PAIS             EDAD        PESO       SEXO   \n");
 
     for(i=0;i<sizeMasctota;i++)
         {
@@ -301,7 +301,7 @@ int altaMascota(eMascotas listaMascota[],int sizeMascota, eClientes listaCliente
                     }
                     getInt(&listaMascota[indiceEncontrado].edad,"Ingrese edad de la mascota:","Error, no es un numero\n",1,100,10);
                     getFloat(&listaMascota[indiceEncontrado].peso,"Ingrese el peso de la mascota:","Error, debe ser en numeros",1,150,10);
-                    getOptionChar(&listaMascota[indiceEncontrado].sexo,"Ingrese el sexo de la mascota[M/H]:","Error, no es una letra valida\n",'m','h');
+                    getOptionChar(&listaMascota[indiceEncontrado].sexo,"Ingrese el sexo de la mascota[M/H][Macho/Hembra]:","Error, no es una letra valida\n",'m','h');
 
                     listarClientes(listaClientes,sizeClientes);
 
@@ -312,7 +312,7 @@ int altaMascota(eMascotas listaMascota[],int sizeMascota, eClientes listaCliente
                     system("pause");
                     system("cls");
                     printf("Mascota Cargada correctamente\n\n");
-                     printf(" ID \tNOMBRE        TIPO      RAZA     PAIS     EDAD      PESO      SEXO    \n");
+                      printf(" ID \tNOMBRE        TIPO      RAZA                      PAIS             EDAD        PESO       SEXO   \n");
                     mostrarMascota(listaMascota,indiceEncontrado);
                     printf("\n");
 

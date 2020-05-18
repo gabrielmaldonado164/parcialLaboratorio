@@ -18,7 +18,8 @@ int menuPrincipal(void)
             printf("9.Promedio de edad de las mascotas\n");
             printf("10.Promedio de edad de las mascotas por tipo\n");
             printf("11.Porcentaje mujeres\n");
-            printf("12.Salir\n");
+            printf("12.Listar clientes con mascotas del mismo sexo\n");
+            printf("13.Salir\n");
 
 
 
@@ -90,7 +91,7 @@ void listarClientesConMascotas(eClientes listaClientes[], int sizeCliente, eMasc
             flagTieneMascota='n';
 
 
-           printf(" ID \tNOMBRE        TIPO      RAZA     PAIS     EDAD      PESO      SEXO    \n");
+           printf(" ID \tNOMBRE        TIPO      RAZA                      PAIS             EDAD        PESO       SEXO   \n");
 
 
             for(int j=0;j<sizeMascota;j++)
@@ -107,6 +108,39 @@ void listarClientesConMascotas(eClientes listaClientes[], int sizeCliente, eMasc
                 printf("No tiene mascotas\n");
             }
             printf("\n");
+        }
+    }
+    return 0;
+}
+
+void listarClientesConMascotasDelMismoSexo(eClientes listaClientes[], int sizeCliente, eMascotas listaMascotas[], int sizeMascota)
+{
+    char flagTieneMascota;
+
+
+    for(int i=0;i<sizeCliente;i++)
+    {
+        if(listaClientes[i].isEmpty==OCUPADO)
+        {
+            printf("\n------------------------------------cliente %i------------------------------------------------\n\n",i+1);
+            printf(" ID \tNOMBRE        APELLIDO        LOCALIDAD         TELEFONO       EDAD    SEXO\n");
+            mostrarCliente(listaClientes,i);
+            printf("\n\tMascota:\n\n");
+
+
+            printf(" ID \tNOMBRE        TIPO      RAZA                      PAIS             EDAD        PESO       SEXO   \n");
+
+
+            for(int j=0;j<sizeMascota;j++)
+            {
+                if(listaMascotas[j].isEmpty==OCUPADO && (listaMascotas[j].idCliente == listaClientes[i].idCliente)&& listaMascotas[j].sexo == 'H')
+                {
+
+                    mostrarMascota(listaMascotas,j);
+
+                }
+            }
+
         }
     }
     return 0;
@@ -155,7 +189,7 @@ void listarMascotasMayoreDeTres(eMascotas listaMascotas[], int sizeMascotas, eCl
             if(listaMascotas[i].isEmpty == OCUPADO && listaMascotas[i].edad>3)
                 {
                     printf("\n------------------------------------MASCOTA %i------------------------------------------------\n\n",i+1);
-                    printf(" ID \tNOMBRE        TIPO      RAZA     PAIS     EDAD      PESO      SEXO    \n");
+                     printf(" ID \tNOMBRE        TIPO      RAZA                      PAIS             EDAD        PESO       SEXO   \n");
                     mostrarMascota(listaMascotas,i);
                     printf("\n\Cliente:\n\n");
 
@@ -186,7 +220,7 @@ void listarMascotasConClientes(eMascotas listaMascotas[], int sizeMascotas, eCli
             if(listaMascotas[i].isEmpty == OCUPADO)
                 {
                     printf("\n------------------------------------MASCOTA %i------------------------------------------------\n\n",i+1);
-                    printf(" ID \tNOMBRE        TIPO      RAZA     PAIS     EDAD      PESO      SEXO    \n");
+                     printf(" ID \tNOMBRE        TIPO      RAZA                      PAIS             EDAD        PESO       SEXO   \n");
                     mostrarMascota(listaMascotas,i);
                     printf("\n\Cliente:\n\n");
 

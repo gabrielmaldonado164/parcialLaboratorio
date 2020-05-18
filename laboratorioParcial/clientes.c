@@ -167,7 +167,7 @@ int altaClientes(eClientes listaClientes[],int sizeClientes)
             getCharString(&listaClientes[indiceEncontrado].localidad,"Ingrese localidad del cliente:","Error, localidad no valida\n",1,50,10);
             getCharStringNumeros(&listaClientes[indiceEncontrado].telefono,"Ingrese telefono:","Error, deben ser numeros\n",1,50,10);
             getInt(&listaClientes[indiceEncontrado].edad,"Ingrese la edad del cliente:","Error, debe ser en numeros\n",1,100,10);
-            getOptionChar(&listaClientes[indiceEncontrado].sexo,"Ingrese sexo del cliente[M/H]:","Error, no es un letra valida",'m','h');
+            getOptionChar(&listaClientes[indiceEncontrado].sexo,"Ingrese sexo del cliente[M/H][Mujer/Hombre]:","Error, no es un letra valida",'m','h');
 
             listaClientes[indiceEncontrado].isEmpty = OCUPADO;
 
@@ -349,7 +349,7 @@ int contadorMujeres(eClientes listaClientes[], int sizeClientes)
     int contador=0;
     for(int i=0;i<sizeClientes;i++)
         {
-            if(listaClientes[i].isEmpty == OCUPADO && listaClientes[i].sexo == 'm')
+            if(listaClientes[i].isEmpty == OCUPADO && listaClientes[i].sexo == 'M')
                 {
                     contador++;
                 }

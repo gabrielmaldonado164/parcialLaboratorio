@@ -15,15 +15,10 @@ int main()
 
 
     inicializarClientes(listaClientes,SIZE_CLIENTES);
-    //harcodeoClientes(listaClientes);
+    harcodeoClientes(listaClientes);
     inicioMascotas(listaMascotas,SIZE_MASCOTAS);
-    //harcodeoMascotas(listaMascotas);
+    harcodeoMascotas(listaMascotas);
 
-    //listarClientes(listaClientes,SIZE_CLIENTES);
-
-    //listarMascotas(listaMascotas,SIZE_MASCOTAS);
-
-    //listarClientesConMascotas(listaClientes,SIZE_CLIENTES,listaMascotas,SIZE_MASCOTAS);
 
     do
         {
@@ -136,6 +131,10 @@ int main()
                         system("pause");
                         break;
                 case 12:
+                        listarClientesConMascotasDelMismoSexo(listaClientes,SIZE_CLIENTES,listaMascotas,SIZE_MASCOTAS);
+                        system("pause");
+                        break;
+                case 13:
                         getOptionChar(&confirma,"Desea salir[S/N]","Error, letras invalidas\n",'s','n');
 
                         if(confirma=='S')
